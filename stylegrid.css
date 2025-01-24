@@ -1,0 +1,25 @@
+/* Estilos específicos para Grid */
+
+/* Define un contenedor principal con Grid */
+section {
+    display: grid; /* Habilita el modelo de cuadrícula */
+    grid-template-areas: /* Define las áreas de la cuadrícula */
+        'header header' /* Primera fila: el encabezado ocupa dos columnas */
+        'content sidebar'; /* Segunda fila: contenido y barra lateral */
+    grid-template-columns: 2fr 1fr; /* Define las columnas: 2 fracciones para contenido, 1 para la barra lateral */
+    grid-template-rows: auto auto; /* Define las filas con altura automática */
+    gap: 10px; /* Espaciado entre los elementos de la cuadrícula */
+}
+
+/* Asigna cada sección a un área de la cuadrícula */
+section#inicio {
+    grid-area: header; /* Área asignada al encabezado */
+}
+
+section#sobre {
+    grid-area: content; /* Área asignada al contenido */
+}
+
+section#contacto {
+    grid-area: sidebar; /* Área asignada a la barra lateral */
+}
